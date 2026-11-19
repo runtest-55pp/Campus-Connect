@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CampusConnect - My Registrations</title>
+<!-- Tailwind CSS CDN with forms and container-queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f5f3ff',
+              100: '#ede9fe',
+              200: '#ddd6fe',
+              500: '#8b5cf6',
+              600: '#7c3aed',
+              700: '#6d28d9',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col font-sans">
+<!-- BEGIN: MainHeader -->
+<header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-6 h-18 py-3.5 flex items-center justify-between">
+<!-- Logo and Left Navigation -->
+<div class="flex items-center space-x-10">
+<!-- Brand Logo -->
+<a class="flex items-center space-x-2.5 text-slate-900 group" href="#">
+<div class="w-9 h-9 rounded-xl bg-violet-600 flex items-center justify-center text-white shadow-sm shadow-violet-200">
+<!-- Graduation Cap / Book Icon -->
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+<path d="M12 3L1 9L12 15L21 10.09V17H23V9M5 13.18V17.18L12 21L19 17.18V13.18L12 17L5 13.18Z"></path>
+</svg>
+</div>
+<span class="font-bold text-xl tracking-tight text-slate-900">Campus<span class="text-violet-600">Connect</span></span>
+</a>
+<!-- Main Navigation Links -->
+<nav aria-label="Main Navigation" class="flex items-center space-x-2">
+<a class="px-4 py-2 rounded-full text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition" href="#">
+            Explore
+          </a>
+<!-- Active State: Pill with violet background -->
+<a aria-current="page" class="px-4 py-2 rounded-full text-sm font-medium bg-violet-50 text-violet-700 ring-1 ring-violet-200/70" href="#">
+            My Registrations
+          </a>
+</nav>
+</div>
+<!-- Right Header: Notifications and Profile -->
+<div class="flex items-center space-x-5">
+<!-- Notification Bell -->
+<button aria-label="Notifications" class="p-2 text-slate-400 hover:text-slate-600 rounded-full hover:bg-slate-100 transition relative" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="absolute top-2 right-2 w-2 h-2 bg-violet-600 rounded-full"></span>
+</button>
+<!-- User Profile Avatar Badge -->
+<div class="flex items-center space-x-3 pl-2 border-l border-slate-200">
+<div class="w-9 h-9 rounded-full bg-violet-100 text-violet-700 font-semibold text-xs flex items-center justify-center ring-2 ring-violet-50">
+            AR
+          </div>
+<div class="flex flex-col">
+<div class="flex items-center space-x-1.5">
+<span class="text-sm font-semibold text-slate-800">Alex Rivera</span>
+<span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-violet-100 text-violet-700">STUDENT</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: MainContent -->
+<main class="flex-1 max-w-5xl w-full mx-auto px-6 py-10 space-y-12">
+<!-- BEGIN: ActiveRegistrationsSection -->
+<section aria-labelledby="registrations-heading" data-purpose="active-registrations">
+<!-- Section Title with inline badge -->
+<div class="flex items-center space-x-3 mb-6">
+<h1 class="text-2xl font-bold tracking-tight text-slate-900" id="registrations-heading">
+          My Registered Events
+        </h1>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-violet-100 text-violet-700 border border-violet-200">
+          2 Active
+        </span>
+</div>
+<!-- Registration Cards List -->
+<div class="space-y-4">
+<!-- Registration Card 1 -->
+<article class="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-sm hover:shadow-md transition flex items-center justify-between">
+<div class="space-y-1.5">
+<h2 class="text-xl font-bold text-slate-900 tracking-tight">AI Build Night</h2>
+<p class="text-sm text-slate-500 font-medium">
+              Status: <span class="text-slate-700 font-semibold">Open</span> <span class="mx-1.5 text-slate-300">•</span> Registered 12 Nov
+            </p>
+</div>
+<!-- Registered Badge -->
+<div class="flex-shrink-0">
+<span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 shadow-sm">
+<svg class="w-3.5 h-3.5 text-emerald-600 stroke-[2.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+              Registered
+            </span>
+</div>
+</article>
+<!-- Registration Card 2 -->
+<article class="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-sm hover:shadow-md transition flex items-center justify-between">
+<div class="space-y-1.5">
+<h2 class="text-xl font-bold text-slate-900 tracking-tight">Open Source Jam</h2>
+<p class="text-sm text-slate-500 font-medium">
+              Status: <span class="text-slate-700 font-semibold">Open</span> <span class="mx-1.5 text-slate-300">•</span> Registered 13 Nov
+            </p>
+</div>
+<!-- Registered Badge -->
+<div class="flex-shrink-0">
+<span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 shadow-sm">
+<svg class="w-3.5 h-3.5 text-emerald-600 stroke-[2.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+              Registered
+            </span>
+</div>
+</article>
+</div>
+</section>
+<!-- END: ActiveRegistrationsSection -->
+<!-- BEGIN: EmptyStatePresentation -->
+<!-- Delineated empty state demonstration container -->
+<section class="pt-6" data-purpose="empty-state-view">
+<div class="border-t border-dashed border-slate-300 pt-8 mb-4">
+<span class="text-xs uppercase tracking-wider font-semibold text-slate-400 block mb-4">Preview: Empty State View</span>
+</div>
+<div class="bg-white rounded-2xl border border-slate-200/80 p-12 text-center shadow-sm max-w-2xl mx-auto flex flex-col items-center">
+<!-- Clean Minimalist Calendar/Ticket Icon -->
+<div class="w-14 h-14 rounded-2xl bg-violet-50 text-violet-600 flex items-center justify-center mb-4 ring-1 ring-violet-100">
+<svg class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"></path>
+</svg>
+</div>
+<!-- Heading -->
+<h3 class="text-lg font-bold text-slate-900 mb-2">No registrations yet</h3>
+<!-- Helpful line -->
+<p class="text-sm text-slate-500 max-w-md leading-relaxed mb-6">
+          You haven't signed up for any events. Browse upcoming workshops, hackathons, and meetups across campus.
+        </p>
+<!-- Primary Action Button -->
+<button class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-medium text-sm text-white bg-violet-600 hover:bg-violet-700 active:bg-violet-800 transition shadow-sm shadow-violet-200" type="button">
+          Explore Campus Events
+        </button>
+</div>
+</section>
+<!-- END: EmptyStatePresentation -->
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: MainFooter -->
+<footer class="bg-white border-t border-slate-200 mt-auto">
+<div class="max-w-7xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+<div>
+<span>CampusConnect • © 2026 Campus Network Inc. All rights reserved.</span>
+</div>
+<nav aria-label="Footer Navigation" class="flex items-center space-x-6">
+<a class="hover:text-slate-800 transition" href="#">About</a>
+<a class="hover:text-slate-800 transition" href="#">Privacy</a>
+<a class="hover:text-slate-800 transition" href="#">Help</a>
+<a class="hover:text-slate-800 transition" href="#">Student Portal</a>
+</nav>
+</div>
+</footer>
+<!-- END: MainFooter -->
+</body></html>

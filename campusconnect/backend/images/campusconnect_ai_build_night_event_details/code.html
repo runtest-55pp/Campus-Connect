@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CampusConnect - AI Build Night</title>
+<!-- Tailwind CSS v3 CDN with forms and container-queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f5f3ff',
+              100: '#ede9fe',
+              200: '#ddd6fe',
+              500: '#8b5cf6',
+              600: '#7c3aed',
+              700: '#6d28d9',
+              800: '#5b21b6'
+            }
+          }
+        }
+      }
+    }
+  </script>
+<!-- Typography styles -->
+<style data-purpose="typography">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+<!-- BEGIN: MainHeader -->
+<!-- Navigation bar identical to CampusConnect design system -->
+<header class="bg-white border-b border-gray-200 sticky top-0 z-30" data-purpose="main-header">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<!-- Brand Logo & Main Navigation -->
+<div class="flex items-center space-x-8">
+<!-- Logo -->
+<a class="flex items-center space-x-3 text-slate-900 group" href="#">
+<div class="w-10 h-10 rounded-xl bg-brand-600 flex items-center justify-center text-white shadow-sm transition-transform group-hover:scale-105">
+<!-- Academic cap icon -->
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM3.45 9L12 4.34 20.55 9 12 13.66 3.45 9zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"></path>
+</svg>
+</div>
+<span class="text-xl font-bold tracking-tight">CampusConnect</span>
+</a>
+<!-- Main Nav Links -->
+<nav class="hidden md:flex items-center space-x-2" data-purpose="primary-navigation">
+<a class="px-4 py-2 rounded-xl text-brand-600 bg-brand-50 text-sm font-semibold transition-colors" href="#">
+            Explore
+          </a>
+<a class="px-4 py-2 rounded-xl text-slate-600 hover:text-slate-900 text-sm font-medium transition-colors" href="#">
+            My Registrations
+          </a>
+</nav>
+</div>
+<!-- User Profile & Notifications -->
+<div class="flex items-center space-x-5" data-purpose="user-navigation">
+<!-- Notification bell icon -->
+<button aria-label="Notifications" class="p-2 text-slate-400 hover:text-slate-600 rounded-full hover:bg-gray-100 transition-colors" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<!-- User Badge and Avatar -->
+<div class="flex items-center space-x-3 pl-2 border-l border-gray-200">
+<div class="text-right hidden sm:block">
+<div class="text-sm font-semibold text-slate-900 leading-tight">Alex Rivera</div>
+<span class="inline-block mt-0.5 px-2 py-0.5 text-[10px] font-semibold tracking-wider text-brand-700 bg-brand-50 rounded-full uppercase">
+              Student
+            </span>
+</div>
+<div class="relative w-10 h-10 rounded-full bg-brand-600 text-white font-semibold flex items-center justify-center text-sm shadow-sm ring-2 ring-white">
+            AR
+            <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-500 rounded-full ring-2 ring-white"></span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: MainContent -->
+<main class="max-w-7xl mx-auto px-6 py-8 flex-1 w-full" data-purpose="event-details-layout">
+<!-- BEGIN: BackNavigation -->
+<!-- Breadcrumb back link -->
+<div class="mb-6">
+<a class="inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors group" href="#">
+<svg class="w-4 h-4 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+        Back to Explore Events
+      </a>
+</div>
+<!-- END: BackNavigation -->
+<!-- BEGIN: EventHeroGrid -->
+<!-- Primary two-column layout as drawn on wireframe -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Event Hero Image, Title, Metadata & Description -->
+<section class="lg:col-span-8 bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-sm" data-purpose="event-overview">
+<!-- Event Image -->
+<div class="relative w-full h-80 sm:h-96 rounded-2xl overflow-hidden mb-6 bg-slate-900 shadow-inner">
+<img alt="AI Build Night students collaborating with laptops" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5B6st8IpYvBryqjSpZ_Jdi4kWp05U0AmjLdJz3F3wMDNGwXqGyHKoaEFe95_WUtURg5Tq4-s37T2mhR2mLRwpBsMGIZvCGbQ3x2Gdl00GiKLR4S8XpZxljM-njLssMQWbBvAv0mOROWkouCHrkdvVaNNsM4N_WC4cfirWVmJbIsbVctUpQBS8qdJCNkwjAs2vM3tTWqcfI_opcNckglfKVixQYVszEBemujx1xH5j"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+<span class="absolute bottom-4 left-4 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/90 text-slate-800 backdrop-blur-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></span>
+            Live Workshop
+          </span>
+</div>
+<!-- Event Tag -->
+<div class="mb-2">
+<span class="text-xs font-bold uppercase tracking-wider text-brand-600">
+            Artificial Intelligence
+          </span>
+</div>
+<!-- Event Display Title -->
+<h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+          AI Build Night
+        </h1>
+<!-- Date, Time and Venue Details -->
+<div class="flex flex-wrap items-center gap-y-3 gap-x-6 text-sm text-slate-600 pb-6 mb-6 border-b border-gray-100">
+<div class="flex items-center space-x-2">
+<svg class="w-4 h-4 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="font-medium">Thu, Oct 24 • 6:30 PM</span>
+</div>
+<div class="flex items-center space-x-2">
+<svg class="w-4 h-4 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="font-medium">Engineering Hall 101</span>
+</div>
+</div>
+<!-- Event Description Paragraph -->
+<div class="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-4">
+<p>
+            Join fellow student developers, machine learning enthusiasts, and builders for an intensive hands-on AI Build Night. Whether you are experimenting with Large Language Models, prompt engineering, or autonomous agents, this workshop provides dedicated time, mentor support, and peer collaboration to turn concepts into running prototypes.
+          </p>
+<p>
+            Bring your laptop and ideas. Pizza, snacks, and high-speed campus compute clusters will be provided throughout the session. Open to all students with basic programming experience.
+          </p>
+</div>
+</section>
+<!-- Right Column: Registration Card -->
+<aside class="lg:col-span-4" data-purpose="active-registration-card">
+<div class="bg-white rounded-3xl p-7 border border-gray-200 shadow-sm sticky top-28">
+<!-- Card Header / Status Pill -->
+<div class="flex items-center justify-between mb-5">
+<span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Registration Status</span>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-2"></span>
+              Open
+            </span>
+</div>
+<!-- Capacity Counter -->
+<div class="mb-4">
+<div class="flex items-baseline justify-between mb-2">
+<span class="text-2xl font-bold text-slate-900 tracking-tight">12 of 50</span>
+<span class="text-sm font-medium text-slate-500">seats left</span>
+</div>
+<!-- Progress Bar: 38 filled out of 50 = 76% filled -->
+<div class="w-full bg-gray-100 rounded-full h-2.5 overflow-hidden">
+<div class="bg-brand-600 h-2.5 rounded-full" style="width: 76%"></div>
+</div>
+<div class="flex justify-between items-center text-xs text-slate-400 mt-2">
+<span>38 registered</span>
+<span>50 total capacity</span>
+</div>
+</div>
+<!-- Divider -->
+<hr class="border-gray-100 my-6"/>
+<!-- Action CTA -->
+<div>
+<button class="w-full py-4 px-6 rounded-2xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-base shadow-sm hover:shadow transition-all duration-150 flex items-center justify-center space-x-2 focus:ring-4 focus:ring-brand-100 focus:outline-none" type="button">
+<span>Register Now</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<p class="text-center text-xs text-slate-400 mt-3">Instant seat confirmation for active students</p>
+</div>
+</div>
+</aside>
+</div>
+<!-- END: EventHeroGrid -->
+<!-- BEGIN: ComponentStatesSection -->
+<!-- Displays the 3 registration panel states from the lower half of the wireframe sketch -->
+<section class="mt-14 pt-10 border-t border-gray-200" data-purpose="registration-states-showcase">
+<div class="mb-6">
+<h2 class="text-lg font-bold text-slate-900">Registration Panel States</h2>
+<p class="text-sm text-slate-500">Visual states of the registration interaction container as specified in design documentation.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- State 1: Available (Open) -->
+<div class="bg-white rounded-2xl p-6 border border-brand-200 shadow-sm relative flex flex-col justify-between" data-purpose="state-card-available">
+<div class="mb-5">
+<div class="flex items-center justify-between mb-3">
+<span class="text-xs font-semibold text-slate-400 tracking-wider uppercase">State 1: Available</span>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-violet-50 text-violet-700 border border-violet-200">
+                Open
+              </span>
+</div>
+<div class="text-xl font-bold text-slate-900">12 of 50 seats left</div>
+<div class="w-full bg-gray-100 rounded-full h-2 mt-3 overflow-hidden">
+<div class="bg-brand-600 h-2 rounded-full" style="width: 76%"></div>
+</div>
+</div>
+<div>
+<button class="w-full py-3 px-4 rounded-xl bg-brand-600 text-white font-semibold text-sm hover:bg-brand-700 shadow-sm transition" type="button">
+              Register Now
+            </button>
+</div>
+</div>
+<!-- State 2: Event Full (Closed/Disabled) -->
+<div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm relative flex flex-col justify-between opacity-95" data-purpose="state-card-full">
+<div class="mb-5">
+<div class="flex items-center justify-between mb-3">
+<span class="text-xs font-semibold text-slate-400 tracking-wider uppercase">State 2: Full</span>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-gray-100 text-gray-600 border border-gray-300">
+                Closed
+              </span>
+</div>
+<div class="text-xl font-bold text-slate-500">0 seats left</div>
+<div class="w-full bg-gray-200 rounded-full h-2 mt-3 overflow-hidden">
+<div class="bg-gray-400 h-2 rounded-full" style="width: 100%"></div>
+</div>
+</div>
+<div>
+<button class="w-full py-3 px-4 rounded-xl bg-gray-200 text-gray-500 font-semibold text-sm cursor-not-allowed border border-gray-300" disabled="" type="button">
+              Event Full
+            </button>
+</div>
+</div>
+<!-- State 3: Registered (Success state) -->
+<div class="bg-white rounded-2xl p-6 border border-emerald-200 shadow-sm relative flex flex-col justify-between" data-purpose="state-card-registered">
+<div class="mb-5">
+<div class="flex items-center justify-between mb-3">
+<span class="text-xs font-semibold text-slate-400 tracking-wider uppercase">State 3: Registered</span>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                Confirmed
+              </span>
+</div>
+<div class="text-xl font-bold text-emerald-800 flex items-center space-x-1.5">
+<span>You're registered!</span>
+</div>
+<p class="text-xs text-slate-500 mt-2">1 seat reserved under Alex Rivera</p>
+</div>
+<div>
+<div class="w-full py-3 px-4 rounded-xl bg-emerald-600 text-white font-semibold text-sm flex items-center justify-center space-x-1.5 shadow-sm">
+<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M4.5 12.75l6 6 9-13.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Registered</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ComponentStatesSection -->
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: MainFooter -->
+<!-- Clean footer matching screenshot Screen 2 -->
+<footer class="bg-white border-t border-gray-200 mt-16" data-purpose="main-footer">
+<div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="text-sm text-slate-500 text-center md:text-left">
+<span class="font-semibold text-slate-700">CampusConnect</span> • © 2026 Campus Network Inc. All rights reserved.
+      </div>
+<div class="flex items-center space-x-6 text-sm text-slate-500" data-purpose="footer-links">
+<a class="hover:text-slate-900 transition-colors" href="#">About</a>
+<a class="hover:text-slate-900 transition-colors" href="#">Privacy</a>
+<a class="hover:text-slate-900 transition-colors" href="#">Help</a>
+<a class="text-brand-600 hover:text-brand-700 font-medium transition-colors" href="#">Student Portal</a>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+</body></html>
